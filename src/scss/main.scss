@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$border-color: rgba(128, 128, 128, .2);
+
+html,
+body {
+  height: 100%;
+}
+
+button {
+  background-color: #fff;
+  border-color: $border-color;
+  border-radius: 5px;
+}
+
+.header {
+  padding: 15px 27px;
+  background-color: #29313C;
+  border-bottom: 1px solid $border-color;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+}
+
+.header-logo__icon-binman {
+  margin-right: 15px;
+}
+
+main {
+  background-color: #F4F9FB;
+  height: 100%;
+  display: flex;
+}
+
+.main__panel-tabs {
+  background-color: #323A45;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+
+  & > * {
+    background-color: transparent;
+    display: block;
+    border: none;
+    padding: 10px 15px;
+    margin: 20px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 4px #282E37;
+      background-color: #282E37;
+    }
+  }
+}
+
+.main__main-body {
+  overflow: hidden;
+  width: 100%;
+  padding: 30px;
+  font: 300 20px "Roboto", sans-serif;
+
+  & h2 {
+    font: 300 20px "Roboto", sans-serif;
+    margin-bottom: 5px;
+  }
+
+  & p {
+    font-size: 12px;
+    color: grey;
+  }
+}
+
+.main-body__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-favorites,
+.button-add {
+  padding: 10px;
+  text-transform: uppercase;
+  transition: all .2s ease-in;
+
+  svg {
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #386BF2;
+  }
+
+  &:hover svg path {
+    fill: #fff;
+  }
+}
+
