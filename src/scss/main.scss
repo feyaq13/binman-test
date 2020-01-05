@@ -96,3 +96,100 @@ main {
   }
 }
 
+.wrapper-table {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #29313C;
+  }
+}
+
+table {
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 30px;
+  border-bottom: #F4F9FB;
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1000px;
+}
+
+table th {
+  padding: 20px 10px;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.add-text {
+  font-size: 11px;
+  color: rgb(152, 152, 152);
+}
+
+table td {
+  img, svg  {
+    vertical-align: middle;
+  }
+}
+
+table td {
+  padding: 5px 0 5px 20px;
+
+  & > svg {
+    margin-right: 10px;
+  }
+}
+
+td.no-info {
+  color: rgb(152, 152, 152);
+
+  & > svg path {
+    fill: rgba(152, 152, 152, .5);
+  }
+}
+
+table tr,
+thead {
+  border-bottom: 3px solid #F4F9FB;
+}
+
+.cell-wrapper {
+  display: inline-block;
+}
+
+.cell-stars img {
+  margin-bottom: 5px;
+}
+
+.cell-phone-number a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.cell-person > *,
+.cell-phone-number > *,
+.cell-email > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cell-button button {
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #386BF2;
+  }
+}
+
+.cell-button button img {
+  padding: 8px;
+}
+
