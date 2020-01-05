@@ -10,12 +10,18 @@ $border-radius-input: 3px;
 html,
 body {
   height: 100%;
+  font-family: "Roboto Light", sans-serif;
 }
 
 button {
   background-color: #fff;
-  border-color: $border-color;
+  border: 1px solid $border-color;
   border-radius: 5px;
+}
+
+h2 {
+  font: 300 20px "Roboto", sans-serif;
+  margin-bottom: 5px;
 }
 
 .header {
@@ -62,14 +68,11 @@ main {
   padding: 30px;
   font: 300 20px "Roboto", sans-serif;
 
-  & h2 {
-    font: 300 20px "Roboto", sans-serif;
-    margin-bottom: 5px;
-  }
-
   & p {
     font-size: 12px;
-    color: grey;
+  }
+}
+
 .main__main-body--disabled {
   &::before {
     content: "";
