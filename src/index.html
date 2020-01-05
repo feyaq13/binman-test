@@ -27,7 +27,7 @@
       <img class="panel-tabs__tab-analytics" src="images/icon-tab-analytics.svg" alt="">
     </button>
   </div>
-  <div class="main__main-body">
+  <div class="main__main-body main__main-body--disabled">
     <div class="main-body__head">
       <div class="head__wrap">
         <h2>Ваши соискатели</h2>
@@ -237,6 +237,30 @@
         </table>
       </div>
   </div>
+  <div class="main__add-job-seekers main__add-job-seekers--open">
+    <button class="add-job-seekers__button">
+      <img src="images/icon-close.png" alt="">
+    </button>
+    <div class="form-wrapper">
+      <form class="form-add-job-seekers" action="">
+        <h2>Добавление соискателя</h2>
+        <p>Основные данные</p>
+        <label class="add-job-seekers__label" for="add-job-seekers__name">ФИО</label>
+        <input id="add-job-seekers__name" type="text" placeholder="Введите ФИО">
+        <label class="add-job-seekers__label" for="add-job-seekers__vacant">Вакансия</label>
+        <input id="add-job-seekers__vacant" type="text" placeholder="Введите вакансию">
+        <label class="add-job-seekers__label" for="add-job-seekers__upload-photo">Фотография</label>
+        <span class="upload-photo__placeholder">
+          Размер файла вложения не должен превышать 5 Мб, для загрузки допустимы следующие форматы файлов: jpg, png
+        </span>
+          <div class="add-job-seekers__upload-photo">
+            <label class="add-job-seekers__button-fake" for="add-job-seekers__upload-photo">Выберите файл</label>
+            <input id="add-job-seekers__upload-photo" type="file">
+            <span>Файл не выбран</span>
+          </div>
+        </form>
+      </div>
+    </div>
 </main>
 <script src="main.js"></script>
 </body>
