@@ -122,9 +122,10 @@ main {
   }
 }
 
+// <-- таблица
+
 .wrapper-table {
   overflow-x: scroll;
-  //max-width: 800px;
 
   &::-webkit-scrollbar {
     height: 4px;
@@ -220,6 +221,10 @@ thead {
 .cell-button button img {
   padding: 8px;
 }
+
+// таблица -->
+
+// <-- popup форма
 
 .form-add-job-seekers {
   position: relative;
@@ -329,7 +334,9 @@ input.add-job-seekers__button-fake {
   z-index: 1;
 }
 
-// Рейтинг/оценка резюме
+// popup форма -->
+
+// Рейтинг/оценка соискателя
 
 .fieldset-rating {
   border: 1px solid transparent;
