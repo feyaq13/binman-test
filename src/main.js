@@ -29,7 +29,7 @@ function closeDropdownForm (e) {
 
 $(document).keyup(function (e) {
   if (e.key === "Escape") {
-    popupForm.removeClass('main__add-job-seekers--visible');
+    popupForm.removeClass('form-add-job-seekers--visible');
     container.removeClass('main-body--disabled');
   }
 });
