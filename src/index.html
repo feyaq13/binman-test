@@ -263,10 +263,10 @@
         <p>Контактные данные</p>
         <label class="add-job-seekers__label" for="add-job-seekers__phone-number">Номер телефона</label>
         <input id="add-job-seekers__phone-number" type="text" placeholder="Введите номер телефона">
-        <button>Добавить еще один номер телефона</button>
+        <input type="submit" disabled value="Добавить еще один номер телефона">
         <label class="add-job-seekers__label" for="add-job-seekers__email">E-mail</label>
         <input id="add-job-seekers__email" type="text" placeholder="Введите адрес e-mail">
-        <button>Добавить еще один e-mail</button>
+        <input type="submit" disabled  value="Добавить еще один e-mail">
         <p>Резюме и результаты тестового задания</p>
         <span class="input__placeholder">
             Размер файла вложения не должен превышать 5 Мб, для загрузки допустимы следующие форматы файлов: jpg, png
@@ -348,6 +348,12 @@
           </div>
         </fieldset>
       </div>
+      <button class="add-job-seekers__button-reset" type="reset">
+        Отменить
+      </button>
+      <button class="add-job-seekers__button-sumbit" type="submit">
+        Добавить соискателя
+      </button>
     </div>
   </form>
 </main>

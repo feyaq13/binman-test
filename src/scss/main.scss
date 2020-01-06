@@ -19,6 +19,15 @@ button {
   border-radius: 5px;
 }
 
+@mixin button ($background-color, $value) {
+  display: inline-block;
+  cursor: pointer;
+  #{background-color}: $value;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: $border-radius-input;
+}
+
 h2 {
   font: 300 20px "Roboto", sans-serif;
   margin-bottom: 5px;
@@ -239,6 +248,10 @@ thead {
   right: -55%;
   z-index: 1;
   transition: all .3s ease-in-out;
+
+  button {
+    text-transform: uppercase;
+  }
 }
 
 .form-add-job-seekers--visible {
@@ -262,7 +275,7 @@ thead {
   .form-add-job-seekers__section {
     margin-bottom: 35px;
 
-    & > input {
+    & > input[type="text"] {
       background-color: #F4F9FB;
       border: 1px solid #DCE5EA;
       border-radius: $border-radius-input;
@@ -280,13 +293,6 @@ thead {
     display: block;
   }
 
-  input {
-    background-color: #F4F9FB;
-    border: 1px solid #DCE5EA;
-    border-radius: $border-radius-input;
-    padding: 10px;
-  }
-
   h2, p, legend {
     text-transform: uppercase;
   }
@@ -294,6 +300,12 @@ thead {
   h2 {
     margin-bottom: 45px;
   }
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px dotted #989898;
 }
 
 .add-job-seekers__upload-photo,
@@ -313,13 +325,8 @@ thead {
 }
 
 .add-job-seekers__button-fake {
-  display: inline-block;
-  cursor: pointer;
-  background-color: #386BF2;
+  @include button (background-color, #386BF2);
   color: #fff;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: $border-radius-input;
 }
 
 input.add-job-seekers__button-fake {
@@ -395,5 +402,17 @@ input:nth-of-type(4):checked + label {
 
 input:nth-of-type(5):checked + label {
   background: url("../images/img-star-5.png") no-repeat;
+}
+
+.add-job-seekers__button-reset {
+  @include button (background-color, #fff);
+  width: 45%;
+  margin-right: 20px;
+}
+
+.add-job-seekers__button-sumbit {
+  @include button (background-color, #386BF2);
+  color: #fff;
+  width: 45%;
 }
 
