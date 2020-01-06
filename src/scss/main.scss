@@ -280,10 +280,9 @@ thead {
     border: 1px solid #DCE5EA;
     border-radius: $border-radius-input;
     padding: 10px;
-    width: 100%;
   }
 
-  h2, p {
+  h2, p, legend {
     text-transform: uppercase;
   }
 
@@ -327,6 +326,75 @@ input.add-job-seekers__button-fake {
   left: -55px;
   padding: 8px 10px;
   margin-right: 20px;
-  z-index: 30;
+  z-index: 1;
+}
+
+// Рейтинг/оценка резюме
+
+.fieldset-rating {
+  border: 1px solid transparent;
+  display: inline-block;
+  margin-right: 55px;
+}
+
+.fieldset-rating__rating-group {
+  position: relative;
+  padding: 4px;
+}
+
+.fieldset-rating input {
+  position: relative;
+  margin-top: 2px;
+  margin-right: 2px;
+  z-index: 2;
+  opacity: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+label {
+  z-index: 0;
+  background-position: 2px top;
+}
+
+.fieldset-rating__rating-group {
+  input {
+    cursor: pointer;
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    background: url("../images/img-star-1.png") no-repeat;
+    width: 10em;
+    height: 1.5em;
+  }
+}
+
+input:checked + label {
+  opacity: 1;
+}
+
+input:nth-of-type(1):checked + label {
+  background: url("../images/img-star-1.png") no-repeat;
+}
+
+input:nth-of-type(2):checked + label {
+  background: url("../images/img-star-2.png") no-repeat;
+}
+
+input:nth-of-type(3):checked + label {
+  background: url("../images/img-star-3.png") no-repeat;
+}
+
+input:nth-of-type(4):checked + label {
+  background: url("../images/img-star-4.png") no-repeat;
+}
+
+input:nth-of-type(5):checked + label {
+  background: url("../images/img-star-5.png") no-repeat;
 }
 
