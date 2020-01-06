@@ -339,7 +339,7 @@ input.add-job-seekers__button-fake {
 
 .fieldset-rating__rating-group {
   position: relative;
-  padding: 4px;
+  padding: 2px;
 }
 
 .fieldset-rating input {
@@ -348,15 +348,6 @@ input.add-job-seekers__button-fake {
   margin-right: 2px;
   z-index: 2;
   opacity: 0;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-label {
-  z-index: 0;
-  background-position: 2px top;
 }
 
 .fieldset-rating__rating-group {
@@ -368,6 +359,7 @@ label {
     position: absolute;
     left: 0;
     opacity: 0;
+    background-position: 2px top;
     background: url("../images/img-star-1.png") no-repeat;
     width: 10em;
     height: 1.5em;
