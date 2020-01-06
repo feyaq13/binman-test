@@ -237,59 +237,56 @@
         </table>
       </div>
   </div>
-  <div class="main__add-job-seekers">
-    <div class="form-wrapper">
-      <button class="add-job-seekers__button-close">
-        <img src="images/icon-close.png" alt="кнопка закрытия">
-      </button>
-      <form class="form-add-job-seekers" action="">
-        <h2>Добавление соискателя</h2>
-        <div class="form-add-job-seekers__section">
-          <p>Основные данные</p>
-          <label class="add-job-seekers__label" for="add-job-seekers__name">ФИО</label>
-          <input id="add-job-seekers__name" type="text" placeholder="Введите ФИО">
-          <label class="add-job-seekers__label" for="add-job-seekers__vacant">Вакансия</label>
-          <input id="add-job-seekers__vacant" type="text" placeholder="Введите вакансию">
-          <label class="add-job-seekers__label" for="add-job-seekers__upload-photo">Фотография</label>
-          <span class="input__placeholder">
+  <form class="form-add-job-seekers" action="">
+    <button class="add-job-seekers__button-close">
+      <img src="images/icon-close.png" alt="кнопка закрытия">
+    </button>
+    <div class="wrapper-form">
+      <h2>Добавление соискателя</h2>
+      <div class="form-add-job-seekers__section">
+        <p>Основные данные</p>
+        <label class="add-job-seekers__label" for="add-job-seekers__name">ФИО</label>
+        <input id="add-job-seekers__name" type="text" placeholder="Введите ФИО">
+        <label class="add-job-seekers__label" for="add-job-seekers__vacant">Вакансия</label>
+        <input id="add-job-seekers__vacant" type="text" placeholder="Введите вакансию">
+        <label class="add-job-seekers__label" for="add-job-seekers__upload-photo">Фотография</label>
+        <span class="input__placeholder">
           Размер файла вложения не должен превышать 5 Мб, для загрузки допустимы следующие форматы файлов: jpg, png
         </span>
-          <div class="add-job-seekers__upload-photo">
-            <label class="add-job-seekers__button-fake" for="add-job-seekers__upload-photo">Выберите файл</label>
-            <input class="add-job-seekers__button-fake" id="add-job-seekers__upload-photo" type="file">
-            <span>Файл не выбран</span>
-          </div>
+        <div class="add-job-seekers__upload-photo">
+          <label class="add-job-seekers__button-fake" for="add-job-seekers__upload-photo">Выберите файл</label>
+          <input class="add-job-seekers__button-fake" id="add-job-seekers__upload-photo" type="file">
+          <span>Файл не выбран</span>
         </div>
-        <div class="form-add-job-seekers__section">
-          <p>Контактные данные</p>
-          <label class="add-job-seekers__label" for="add-job-seekers__phone-number">Номер телефона</label>
-          <input id="add-job-seekers__phone-number" type="text" placeholder="Введите номер телефона">
-          <button>Добавить еще один номер телефона</button>
-          <label class="add-job-seekers__label" for="add-job-seekers__email">E-mail</label>
-          <input id="add-job-seekers__email" type="text" placeholder="Введите адрес e-mail">
-          <button>Добавить еще один e-mail</button>
-          <p>Резюме и результаты тестового задания</p>
-          <span class="input__placeholder">
+      </div>
+      <div class="form-add-job-seekers__section">
+        <p>Контактные данные</p>
+        <label class="add-job-seekers__label" for="add-job-seekers__phone-number">Номер телефона</label>
+        <input id="add-job-seekers__phone-number" type="text" placeholder="Введите номер телефона">
+        <button>Добавить еще один номер телефона</button>
+        <label class="add-job-seekers__label" for="add-job-seekers__email">E-mail</label>
+        <input id="add-job-seekers__email" type="text" placeholder="Введите адрес e-mail">
+        <button>Добавить еще один e-mail</button>
+        <p>Резюме и результаты тестового задания</p>
+        <span class="input__placeholder">
             Размер файла вложения не должен превышать 5 Мб, для загрузки допустимы следующие форматы файлов: jpg, png
           </span>
-          <div class="add-job-seekers__resume">
-            <label class="add-job-seekers__button-fake" for="add-job-seekers__resume">Резюме</label>
-            <input class="add-job-seekers__button-fake" id="add-job-seekers__resume" type="file">
-            <span>Файл не выбран</span>
-          </div>
+        <div class="add-job-seekers__resume">
+          <label class="add-job-seekers__button-fake" for="add-job-seekers__resume">Резюме</label>
+          <input class="add-job-seekers__button-fake" id="add-job-seekers__resume" type="file">
+          <span>Файл не выбран</span>
         </div>
-        <div class="form-add-job-seekers__section">
-          <p>Архив с результатами тестового задания</p>
-          <span class="input__placeholder">
+      </div>
+      <div class="form-add-job-seekers__section">
+        <p>Архив с результатами тестового задания</p>
+        <span class="input__placeholder">
             Размер файла вложения не должен превышать 5 Мб, для загрузки допустимы следующие форматы файлов: jpg, png
           </span>
-          <div class="add-job-seekers__archive">
-            <label class="add-job-seekers__button-fake" for="add-job-seekers__archive">Резюме</label>
-            <input class="add-job-seekers__button-fake" id="add-job-seekers__archive" type="file">
-            <span>Файл не выбран</span>
-          </div>
+        <div class="add-job-seekers__archive">
+          <label class="add-job-seekers__button-fake" for="add-job-seekers__archive">Резюме</label>
+          <input class="add-job-seekers__button-fake" id="add-job-seekers__archive" type="file">
+          <span>Файл не выбран</span>
         </div>
-        </form>
       </div>
     </div>
 </main>
