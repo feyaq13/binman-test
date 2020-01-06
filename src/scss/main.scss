@@ -39,8 +39,12 @@ main {
   position: relative;
   overflow: hidden;
   background-color: #F4F9FB;
-  height: 100%;
+  height: calc(100% - 70px);
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .main__panel-tabs {
@@ -55,6 +59,10 @@ main {
     padding: 10px 15px;
     margin: 20px;
 
+    @media (max-width: 768px) {
+      margin: 20px auto;
+    }
+
     &:hover,
     &:focus {
       box-shadow: 0 2px 4px #282E37;
@@ -65,6 +73,7 @@ main {
 
 .main-body {
   width: 100%;
+  overflow-x: scroll;
   padding: 30px;
   font: 300 20px "Roboto", sans-serif;
 
@@ -114,7 +123,8 @@ main {
 }
 
 .wrapper-table {
-  overflow-x: auto;
+  overflow-x: scroll;
+  //max-width: 800px;
 
   &::-webkit-scrollbar {
     height: 4px;
@@ -127,6 +137,7 @@ main {
 }
 
 table {
+  overflow-x: scroll;
   background-color: #fff;
   border-radius: 4px;
   font-size: 14px;
@@ -210,26 +221,46 @@ thead {
   padding: 8px;
 }
 
+.main__add-job-seekers,
+.form-wrapper {
+  height: 100%;
+}
+
 .main__add-job-seekers {
-  background-color: #fff;
   position: absolute;
   top: 0;
-  bottom: 0;
-  right: -50%;
+  left: 100%;
+  right: -55%;
   z-index: 1;
-  width: 40%;
-  padding: 25px;
-  box-shadow: 0 0 1px 0 #282E37;
-  transition: right .3s ease-in-out;
+  width: 45%;
+  transition: all .3s ease-in-out;
+}
+
+.main__add-job-seekers--visible {
+  right: 0;
+  left: 55%;
+}
+
+.form-wrapper {
+  overflow-x: scroll;
+  display: flex;
+  align-items: flex-start;
 }
 
 .form-add-job-seekers {
   font-weight: 300;
-  margin: 0;
-  padding: 0;
+  font-size: 12px;
+  box-shadow: 0 0 1px 0 #282E37;
+  padding: 25px;
+  margin-left: 55px;
+  background-color: #fff;
 
-  & > * {
-    margin-bottom: 15px;
+  .form-add-job-seekers__section {
+    margin-bottom: 35px;
+
+    & > * {
+      margin-bottom: 18px;
+    }
   }
 
   .add-job-seekers__label {
@@ -254,14 +285,16 @@ thead {
   }
 }
 
-.add-job-seekers__upload-photo {
+.add-job-seekers__upload-photo,
+.add-job-seekers__resume,
+.add-job-seekers__archive {
   padding: 10px;
   background-color: #F4F9FB;
   border: 1px solid #DCE5EA;
   border-radius: $border-radius-input;
 }
 
-.upload-photo__placeholder {
+.input__placeholder {
   color: #989898;
   display: block;
   font-size: 12px;
@@ -274,15 +307,17 @@ thead {
   background-color: #386BF2;
   color: #fff;
   padding: 10px;
+  margin-right: 10px;
   border-radius: $border-radius-input;
 }
 
-#add-job-seekers__upload-photo {
+input.add-job-seekers__button-fake {
   display: none;
 }
 
 .add-job-seekers__button-close {
-  padding: 10px;
   position: absolute;
-  left: -70px;
+  padding: 10px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
