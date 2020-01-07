@@ -262,13 +262,13 @@ thead {
 .wrapper-form {
   overflow-x: scroll;
   height: 100%;
+  padding: 35px;
 }
 
 .form-add-job-seekers {
   font-weight: 300;
   font-size: 12px;
   box-shadow: 0 0 1px 0 #282E37;
-  padding: 25px;
   margin-left: 55px;
   background-color: #fff;
 
@@ -337,6 +337,7 @@ input.add-job-seekers__button-fake {
 
 .add-job-seekers__button-close {
   position: absolute;
+  top: 35px;
   left: -55px;
   padding: 8px 10px;
   margin-right: 20px;
