@@ -201,6 +201,7 @@ thead {
 
 .cell-wrapper {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .cell-stars img {
@@ -208,15 +209,8 @@ thead {
 }
 
 .cell-phone-number a {
-  display: inline-block;
   margin-right: 10px;
   text-decoration: none;
-}
-.cell-person > *,
-.cell-phone-number > *,
-.cell-email > * {
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .cell-person__photo {
